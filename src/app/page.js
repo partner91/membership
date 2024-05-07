@@ -1,3 +1,16 @@
-export default function Home() {
-  return <div>Home</div>;
+import Header from '../components/header/Header';
+import Nav from '../components/navigation/Nav';
+import { Alert } from 'flowbite-react';
+export default function HomePage() {
+  return (
+    <div className='h-screen flex flex-col'>
+      <Header />
+      <div className='flex flex-col grow'>
+        <aside className='grow'>
+          <Nav />
+        </aside>
+        <main></main>
+      </div>
+    </div>
+  );
 }

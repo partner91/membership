@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from '../components/navigation/Navigation';
 import Header from '../components/header/Header';
+import Navigation from '../components/navigation/Navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,12 +15,8 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className='bg-gray-50'>
         <Header />
-        <section className='flex pt-16 overflow-hidden bg-gray-50'>
-          <Navigation />
-          <main className='pl-64 h-full overflow-y-auto bg-gray-50'>
-            {children}
-          </main>
-        </section>
+        <Navigation />
+        <main className='ml-64 mt-16'>{children}</main>
       </body>
     </html>
   );
